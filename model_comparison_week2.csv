@@ -1,0 +1,3 @@
+model,accuracy,precision,recall,f1
+SVM,0.858,,,
+BiLSTM,0.492,0.492,1.0,0.6595174262734584

@@ -1,0 +1,13 @@
+# Ignore model directories
+model/
+models/
+model_files/
+
+# Ignore ML artifacts
+*.pkl
+*.h5
+*.joblib
+
+# Ignore caches and secrets
+__pycache__/
+.env

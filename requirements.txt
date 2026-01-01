@@ -1,0 +1,10 @@
+streamlit
+fastapi
+uvicorn
+pandas
+numpy
+python-dotenv
+pydantic
+scikit-learn
+tensorflow
+plotly
