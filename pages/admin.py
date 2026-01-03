@@ -8,9 +8,8 @@ from db import supabase_public
 from auth import login, signup, logout
 
 
-st.set_page_config(page_title="Admin Login", layout="centered")
-
 # -------- Session state --------
+# User and Messages are now initialized in app.py
 if "user" not in st.session_state:
     st.session_state.user = None
 
@@ -22,7 +21,9 @@ if st.session_state.user is None:
 
 # -------- Login / Signup UI --------
 def auth_ui():
-    st.title("🔐 Admin Login")
+    if st.sidebar.button("🔙 Back to Chat"):
+        st.switch_page("pages/chat.py")
+    st.title("Admin Login")
 
     tab1, tab2 = st.tabs(["Login", "Sign Up"])
 
@@ -50,8 +51,10 @@ def auth_ui():
 # -------- Dashboard --------
 def dashboard():
     st.sidebar.button("Log Out", on_click=logout)
+    if st.sidebar.button("🔙 Back to Chat"):
+        st.switch_page("pages/chat.py")
 
-    st.title("📊 Sentiment Admin Dashboard")
+    st.title("Sentiment Admin Dashboard")
 
     @st.cache_data(ttl=30)
     def load_logs():
