@@ -45,7 +45,7 @@ def load_chat(chat_id):
 # --- Page Logic ---
 def chat_page():
     # Page config (Inner title)
-    st.title("🤖 UrduAI Chat")
+    st.title("Urdu Chat Analyzer")
 
     # Initialize backend
     @st.cache_resource
